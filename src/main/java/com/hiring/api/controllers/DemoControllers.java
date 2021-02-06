@@ -10,6 +10,6 @@ public class DemoControllers {
 
     @GetMapping("")
     public String home(){
-        return "Hello Spring => <a href='/api/admin/'> Admin REST API </a>";
+        return "<a href='/api/admin/'> Admin REST API </a>";
     }
 }
