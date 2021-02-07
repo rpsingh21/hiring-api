@@ -22,6 +22,9 @@ public class Company extends Auditable{
     private City city;
     private String logo;
 
-    @OneToMany(mappedBy = "company", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "company", fetch = FetchType.LAZY)
     private Set<Experience> experiences = new HashSet<>();
+
+    @OneToMany(mappedBy = "company", fetch = FetchType.LAZY)
+    private Set<Recruiter> recruiters = new HashSet<>();
 }

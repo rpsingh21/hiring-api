@@ -27,14 +27,8 @@ public class Jobseeker extends Auditable {
     private String phone;
     private Boolean isPhoneVerified = false;
 
-    @Column(length = 32)
-    private String firstName;
-
-    @Column(length = 32)
-    private String lastName;
-
-    @Column(length = 32)
-    private String middleName;
+    @Column(length = 64)
+    private String name;
 
     @Column(length = 128)
     private String headLine;
@@ -59,5 +53,8 @@ public class Jobseeker extends Auditable {
 
     @OneToMany(mappedBy = "jobseeker", fetch = FetchType.EAGER)
     private Set<Education> educations = new HashSet<>();
+
+    @OneToMany(mappedBy = "candidate", fetch = FetchType.LAZY)
+    private Set<JobApplication> jobApplications = new HashSet<>();
 
 }

@@ -24,4 +24,7 @@ public class Account extends Auditable {
 
     @OneToOne(mappedBy = "account")
     private Jobseeker jobseeker;
+
+    @OneToOne(mappedBy = "account")
+    private Recruiter recruiter;
 }
