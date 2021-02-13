@@ -17,8 +17,6 @@ public class Jobseeker extends Auditable {
     @OneToOne(cascade = CascadeType.ALL)
     private Account account;
 
-    @Column(unique = true, nullable = false, length = 64)
-    private String email;
     private Boolean isEmailVerified = false;
     private String image;
     private String resume;
@@ -26,9 +24,6 @@ public class Jobseeker extends Auditable {
     @Column(unique = true, length = 12)
     private String phone;
     private Boolean isPhoneVerified = false;
-
-    @Column(length = 64)
-    private String name;
 
     @Column(length = 128)
     private String headLine;

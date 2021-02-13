@@ -18,6 +18,12 @@ public class Account extends Auditable {
     private String username;
     private String password;
 
+    @Column(unique = true, nullable = false, length = 64)
+    private String email;
+
+    @Column(length = 64)
+    private String name;
+
     @ManyToMany(fetch = FetchType.EAGER)
     @Singular
     private Set<Role> roles = new HashSet<>();

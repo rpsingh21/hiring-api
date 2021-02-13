@@ -18,12 +18,6 @@ public class Recruiter extends Auditable {
     @OneToOne(cascade = CascadeType.ALL)
     private Account account;
 
-    @Column(length = 64)
-    private String name;
-
-    @Column(unique = true, nullable = false, length = 64)
-    private String email;
-    private String password;
     private String profileImage;
 
     @Column(length = 32)

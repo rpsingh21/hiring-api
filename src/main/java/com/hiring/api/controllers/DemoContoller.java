@@ -6,10 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("")
-public class DemoControllers {
-
+public class DemoContoller {
     @GetMapping("")
-    public String home(){
-        return "<a href='/api/admin/'> Admin REST API </a>";
+    public String hello() {
+        return "<a href='/api/admin/'> Admin API </a>";
     }
 }
