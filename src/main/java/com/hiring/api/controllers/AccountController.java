@@ -12,6 +12,7 @@ public class AccountController {
 
     @PostMapping("")
     public Account create(@RequestBody Account account) {
+        account.setUsername(account.getEmail().split("@")[0]);
         return account;
     }
 }
