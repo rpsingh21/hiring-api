@@ -3,8 +3,8 @@ package com.hiring.api.models;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
@@ -26,7 +26,7 @@ public class Account extends Auditable {
 
     @ManyToMany(fetch = FetchType.EAGER)
     @Singular
-    private Set<Role> roles = new HashSet<>();
+    private List<Role> roles = new ArrayList<>();
 
     @OneToOne(mappedBy = "account")
     private Jobseeker jobseeker;
